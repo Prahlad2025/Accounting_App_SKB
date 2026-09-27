@@ -1,0 +1,110 @@
+### Get all expenses
+GET http://localhost:5038/api/expenses
+
+
+### Create expense
+POST http://localhost:5038/api/expenses
+Content-Type: application/json
+
+{
+    "date": "2026-09-13T00:00:00",
+    "purpose": "Grocery",
+    "amount": 1500,
+    "billType": "Food",
+    "status": "Pending",
+    "type": "Expense",
+    "comments": "Monthly grocery"
+}
+
+### Get all expenses
+GET http://localhost:5038/api/expenses
+
+### Update expense
+PUT http://localhost:5038/api/expenses/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "date": "2026-09-13T00:00:00Z",
+    "purpose": "Monthly Grocery",
+    "amount": 1800,
+    "billType": "Food",
+    "status": "Paid",
+    "type": "Expense",
+    "comments": "Updated amount"
+}
+
+### Delete expense
+DELETE http://localhost:5038/api/expenses/1
+
+### Register User
+POST http://localhost:5038/api/auth/register 
+Content-Type: application/json
+
+{
+    "name": "Prahlad",
+    "email": "prahlad@example.com",
+    "password": "Test@12345"
+}
+
+### Login User
+POST http://localhost:5038/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "prahlad@example.com",
+    "password": "Test@12345"
+}
+
+### Get My Expenses
+GET http://localhost:5038/api/expenses
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUHJhaGxhZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InByYWhsYWRAZXhhbXBsZS5jb20iLCJleHAiOjE3ODkzOTk4MTgsImlzcyI6IkFjY291bnRpbmdfQXBwLkFwaSIsImF1ZCI6IkFjY291bnRpbmdfQXBwIn0.FaQBOFXXOBjTSTzupCb-UfbdMBvzFUzO_O7o0rI8s38
+
+### Create My Expense
+POST http://localhost:5038/api/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUHJhaGxhZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InByYWhsYWRAZXhhbXBsZS5jb20iLCJleHAiOjE3ODkzOTk4MTgsImlzcyI6IkFjY291bnRpbmdfQXBwLkFwaSIsImF1ZCI6IkFjY291bnRpbmdfQXBwIn0.FaQBOFXXOBjTSTzupCb-UfbdMBvzFUzO_O7o0rI8s38
+Content-Type: application/json
+
+{
+    "date": "2026-09-14T00:00:00Z",
+    "purpose": "Vegetable Purchase",
+    "amount": 2500,
+    "billType": "Vegetables",
+    "status": "Paid",
+    "type": "Expense",
+    "comments": "Weekly vegetable purchase"
+}
+
+### Get My Expenses
+GET http://localhost:5038/api/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUHJhaGxhZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InByYWhsYWRAZXhhbXBsZS5jb20iLCJleHAiOjE3ODkzOTk4MTgsImlzcyI6IkFjY291bnRpbmdfQXBwLkFwaSIsImF1ZCI6IkFjY291bnRpbmdfQXBwIn0.FaQBOFXXOBjTSTzupCb-UfbdMBvzFUzO_O7o0rI8s38
+
+### Login
+POST http://localhost:5038/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "prahlad@example.com",
+  "password": "Test@12345"
+}
+
+### Get My Expenses
+GET http://localhost:5038/api/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUHJhaGxhZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InByYWhsYWRAZXhhbXBsZS5jb20iLCJleHAiOjE3ODkzOTk4MTgsImlzcyI6IkFjY291bnRpbmdfQXBwLkFwaSIsImF1ZCI6IkFjY291bnRpbmdfQXBwIn0.FaQBOFXXOBjTSTzupCb-UfbdMBvzFUzO_O7o0rI8s38
+
+### Create Expense
+POST http://localhost:5038/api/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUHJhaGxhZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InByYWhsYWRAZXhhbXBsZS5jb20iLCJleHAiOjE3ODkzOTk4MTgsImlzcyI6IkFjY291bnRpbmdfQXBwLkFwaSIsImF1ZCI6IkFjY291bnRpbmdfQXBwIn0.FaQBOFXXOBjTSTzupCb-UfbdMBvzFUzO_O7o0rI8s38
+Content-Type: application/json
+
+{
+  "date": "2026-09-14T00:00:00",
+  "purpose": "Vegetable Purchase",
+  "amount": 1500,
+  "billType": "Bill",
+  "status": "Paid",
+  "type": "Vegetables",
+  "comments": "Test expense"
+}
+
+

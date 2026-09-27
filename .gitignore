@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+.vs/
+.idea/
+.DS_Store
+*.user
+*.suo
+Accounting-app-web/.env
+Accounting-app-web/.env.*
+!Accounting-app-web/.env.development
+!Accounting-app-web/.env.example

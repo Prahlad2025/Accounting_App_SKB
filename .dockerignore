@@ -1,0 +1,9 @@
+.git/
+.vs/
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+Accounting-app-web/
+**/.env*
+*.log
