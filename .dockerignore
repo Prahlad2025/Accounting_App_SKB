@@ -1,9 +1,33 @@
+
+# Git history and metadata
 .git/
+.gitattributes
+
+# IDE and local development files
 .vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# .NET build output
 **/bin/
 **/obj/
+
+# Node.js dependencies and build output
 **/node_modules/
 **/dist/
+
+# Frontend source is not needed in the API Docker image
 Accounting-app-web/
-**/.env*
+
+# Environment files and secrets
+**/.env
+**/.env.*
+**/secrets.json
+**/secrets.*.json
+
+# Logs and operating system files
 *.log
+.DS_Store
+Thumbs.db

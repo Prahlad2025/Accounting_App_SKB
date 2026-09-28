@@ -1,13 +1,34 @@
+
+# .NET build output
 **/bin/
 **/obj/
+
+# Node.js dependencies and build output
 **/node_modules/
 **/dist/
+
+# IDE files
 .vs/
 .idea/
-.DS_Store
+.vscode/
 *.user
 *.suo
-Accounting-app-web/.env
-Accounting-app-web/.env.*
-!Accounting-app-web/.env.development
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Environment files and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Allow only safe frontend templates and local development config
 !Accounting-app-web/.env.example
+!Accounting-app-web/.env.development
+
+# Local secrets and credentials
+secrets.json
+secrets.*.json
+appsettings.Local.json

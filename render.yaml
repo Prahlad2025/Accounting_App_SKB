@@ -1,22 +1,31 @@
+
 services:
   - type: web
     name: accounting-app-api
     runtime: docker
     region: singapore
     plan: free
+
     dockerContext: .
     dockerfilePath: ./Accounting_App.Api/Dockerfile
+
     healthCheckPath: /health
+
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
+
       - key: ConnectionStrings__DefaultConnection
         sync: false
+
       - key: Jwt__Key
         sync: false
+
       - key: Jwt__Issuer
         value: Accounting_App.Api
+
       - key: Jwt__Audience
         value: Accounting_App
+
       - key: Cors__AllowedOrigins__0
         sync: false
